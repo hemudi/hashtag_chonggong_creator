@@ -31,7 +31,7 @@ const S = {
   `,
   Title: styled.h2`
     width: 100%;
-    font-size: ${theme.fonts.size.large};
+    font-size: ${theme.fonts.size.medium};
     font-weight: ${theme.fonts.weight.bold};
   `,
   Description: styled.p`
