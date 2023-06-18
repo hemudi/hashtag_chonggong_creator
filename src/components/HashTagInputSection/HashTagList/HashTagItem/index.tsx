@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import theme from "@styles/theme";
 import Button from "@components/common/Button";
 import Icon from "@components/common/Icon";
+import { useHashTagAction } from "@store/hashtag";
 
 interface HashTagItemProps {
   num: number;
@@ -10,8 +11,10 @@ interface HashTagItemProps {
 }
 
 const HashTagItem = ({ num, hashTag, ...props }: HashTagItemProps) => {
+  const { removeHashTag } = useHashTagAction();
+
   const handleClickRemoveButton = () => {
-    console.log("click remove button");
+    removeHashTag(num);
   };
 
   return (
@@ -38,7 +41,7 @@ const S = {
   `,
   Index: styled.div`
     ${theme.mixins.flexBox()}
-    width: 40px;
+    width: 50px;
     height: 100%;
     background-color: ${theme.palette.primary};
     border-radius: 10px;

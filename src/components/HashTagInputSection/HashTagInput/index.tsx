@@ -12,7 +12,7 @@ const HASHTAG_MAX_COUNT = 5;
 const HashTagInput = () => {
   const [isAddible, setIsAddible] = useState<boolean>(false);
   const [isListFulled, setIsListFulled] = useState<boolean>(false);
-  const { value, deferredValue, setInputValue } = useInputValue<HashTag>();
+  const { value, deferredValue, setInputValue } = useInputValue("");
   const hashTagCount = useHashTagCount();
   const { addHashTag } = useHashTagAction();
 
@@ -22,8 +22,6 @@ const HashTagInput = () => {
     } else {
       setIsListFulled(false);
     }
-
-    console.log(hashTagCount);
   }, [hashTagCount]);
 
   useEffect(() => {
@@ -40,18 +38,19 @@ const HashTagInput = () => {
   }, [isListFulled, deferredValue]);
 
   const handleInputChange = ({ target }: ChangeEvent<HTMLInputElement>) => {
-    setInputValue(target.value as HashTag);
+    setInputValue(target.value);
   };
 
   const handleAddButtonClick = () => {
-    if (value) {
-      addHashTag(value);
-    }
+    setInputValue((value) => {
+      addHashTag(value as HashTag);
+      return "";
+    });
   };
 
   return (
     <S.HashTagInput>
-      <Input defaultValue={value} onChange={handleInputChange} />
+      <Input value={value} onChange={handleInputChange} />
       <Button disabled={!isAddible} size="medium" onClick={handleAddButtonClick}>
         {isListFulled ? "리스트 꽉 참" : "추가하기"}
       </Button>

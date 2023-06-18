@@ -9,7 +9,7 @@ const HashTagList = () => {
   return (
     <S.HashTagList>
       {hashTagList.map((value, index) => (
-        <HashTagItem key={index} hashTag={value} num={index} />
+        <HashTagItem key={index} hashTag={value} num={index + 1} />
       ))}
     </S.HashTagList>
   );
@@ -20,6 +20,7 @@ const S = {
     ${theme.mixins.flexBox("column")}
     width: 100%;
     height: 100%;
+    min-height: 40px;
     gap: 10px;
     background-color: ${theme.palette.primary_light};
     border-radius: 10px;

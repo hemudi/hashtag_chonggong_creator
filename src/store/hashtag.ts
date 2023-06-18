@@ -16,7 +16,7 @@ interface HashTagStore extends HashTagStoreState {
 }
 
 const HASHTAG_INIT_DATA: HashTagStoreState = {
-  hashTagList: ["#플레이브_노아", "#플레이브_밤비", "#플레이브_은호", "#플레이브_하민"],
+  hashTagList: [],
 };
 
 const useHashTagStore = create<HashTagStore>((set) => ({
