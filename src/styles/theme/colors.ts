@@ -24,13 +24,13 @@ export const colors = {
 export const palette = {
   primary: colors.blue200,
   primary_light: colors.blue100,
-  primary_dark: colors.blue100,
+  primary_dark: colors.blue500,
   secondary: colors.red400,
   secondary_light: colors.red500,
   secondary_dark: colors.red600,
-  neutral: colors.grey200,
+  neutral: colors.grey600,
   neutral_light: colors.grey100,
-  neutral_dark: colors.grey400,
+  neutral_dark: colors.grey800,
   white: colors.white,
   black: colors.black,
 };
