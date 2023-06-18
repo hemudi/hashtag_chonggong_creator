@@ -23,12 +23,12 @@ const TextArea = ({ resize = "none", ...props }: TextAreaProps) => {
 
 const S = {
   TextArea: styled.textarea<TextAreaProps>`
-    width: 500px;
+    width: 100%;
     height: 150px;
     border: 2px solid ${theme.palette.primary};
     border-radius: 10px;
     padding: 10px;
-    font-size: ${theme.fonts.size.base};
+    font-size: ${theme.fonts.size.small};
     resize: ${({ resize }) => resize};
     outline-color: ${theme.palette.primary_dark};
   `,
