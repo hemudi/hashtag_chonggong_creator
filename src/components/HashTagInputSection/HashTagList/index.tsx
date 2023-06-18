@@ -22,6 +22,7 @@ const S = {
     height: 100%;
     gap: 10px;
     background-color: ${theme.palette.primary_light};
+    border-radius: 10px;
     padding: 10px;
   `,
 };

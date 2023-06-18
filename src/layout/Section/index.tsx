@@ -5,8 +5,8 @@ import { styled } from "styled-components";
 interface SectionProps {
   title: string;
   description?: ReactNode;
-  width: `${number}px` | `${number}%`;
-  height: `${number}px` | `${number}%`;
+  width?: `${number}px` | `${number}%` | "fit-content";
+  height?: `${number}px` | `${number}%` | "fit-content";
   children: ReactNode;
 }
 
@@ -15,7 +15,8 @@ const Section = ({ title, description = "", width, height, children }: SectionPr
     <S.Section width={width} height={height}>
       <S.Title>{title}</S.Title>
       <S.Description>{description}</S.Description>
-      <S.Contents>{children}</S.Contents>
+      {children}
+      {/* <S.Contents>{children}</S.Contents> */}
     </S.Section>
   );
 };

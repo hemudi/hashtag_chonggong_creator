@@ -36,11 +36,11 @@ const S = {
 
 const ButtonSizeStyle = {
   small: css`
-    width: 70px;
+    width: 50px;
     height: 40px;
   `,
   medium: css`
-    width: 200px;
+    width: 100px;
     height: 40px;
   `,
   large: css`
