@@ -1,7 +1,4 @@
-import { styled } from "styled-components";
-import { Palette } from "@styles/theme/colors";
 import DeleteIconUrl from "public/Icon/ic_delete.svg?url";
-import theme from "@styles/theme";
 import Image from "next/image";
 
 const iconUrls = {
