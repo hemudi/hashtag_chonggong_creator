@@ -48,10 +48,14 @@ const S = {
     font-weight: ${theme.fonts.weight.bold};
     font-size: ${theme.fonts.size.large};
   `,
-  HashTag: styled.span`
-    display: inline-block;
-    width: 95%;
-    line-height: ${theme.fonts.size.base};
+  HashTag: styled.div`
+    ${theme.mixins.flexBox("column", "flex-start")}
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: break-all;
+    text-overflow: ellipsis;
   `,
 };
 
