@@ -14,7 +14,7 @@ const HashTagItem = ({ num, hashTag, ...props }: HashTagItemProps) => {
   const { removeHashTag } = useHashTagAction();
 
   const handleClickRemoveButton = () => {
-    removeHashTag(num);
+    removeHashTag(num - 1);
   };
 
   return (
