@@ -10,6 +10,7 @@ export const fonts = {
     large: "2rem",
     xLarge: "2.5rem",
     xxLarge: "3rem",
+    logo: "3.5rem",
   },
   weight: {
     regular: 400,
