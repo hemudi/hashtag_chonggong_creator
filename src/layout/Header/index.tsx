@@ -17,12 +17,14 @@ const S = {
   Header: styled.header`
     ${theme.mixins.flexBox("column")}
     ${theme.mixins.preventDraggable()}
-    width: 100%;
     padding: 30px;
   `,
   Title: styled.h1`
     font-size: ${theme.fonts.size.xxLarge};
     font-weight: ${theme.fonts.weight.bold};
+    @media (max-width: 400px) {
+      font-size: ${theme.fonts.size.xLarge};
+    }
   `,
   Description: styled.span`
     color: ${theme.palette.neutral_dark};

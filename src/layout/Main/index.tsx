@@ -10,7 +10,6 @@ const S = {
   Main: styled.main`
     ${theme.mixins.flexBox("row")}
     width: 100%;
-    min-width: 800px;
     height: 100%;
   `,
 };
