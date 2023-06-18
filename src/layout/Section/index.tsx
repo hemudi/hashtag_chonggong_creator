@@ -16,7 +16,6 @@ const Section = ({ title, description = "", width, height, children }: SectionPr
       <S.Title>{title}</S.Title>
       <S.Description>{description}</S.Description>
       {children}
-      {/* <S.Contents>{children}</S.Contents> */}
     </S.Section>
   );
 };
@@ -26,7 +25,7 @@ const S = {
     ${theme.mixins.flexBox("column", "flex-start")}
     width: ${({ width = "100%" }) => width};
     height: ${({ height = "100%" }) => height};
-    min-width: 400px;
+    width: 100%;
     min-height: fit-content;
     padding: 10px;
   `,
@@ -42,10 +41,6 @@ const S = {
     line-height: ${theme.fonts.size.medium};
     color: ${theme.palette.neutral_dark};
     padding: 5px 0 10px 0;
-  `,
-  Contents: styled.div`
-    width: 100%;
-    height: 100%;
   `,
 };
 

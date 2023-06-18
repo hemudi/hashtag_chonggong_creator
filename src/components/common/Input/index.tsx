@@ -21,7 +21,7 @@ const Input = (props: InputProps) => {
 
 const S = {
   Input: styled.input<InputProps>`
-    width: 300px;
+    width: 100%;
     height: 40px;
     border: 2px solid ${theme.palette.primary};
     border-radius: 10px;

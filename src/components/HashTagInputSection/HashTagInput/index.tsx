@@ -50,7 +50,11 @@ const HashTagInput = () => {
 
   return (
     <S.HashTagInput>
-      <Input value={value} onChange={handleInputChange} />
+      <Input
+        value={value}
+        placeholder="해시태그로 쓰고 싶은 문구를 입력하세요"
+        onChange={handleInputChange}
+      />
       <Button disabled={!isAddible} size="medium" onClick={handleAddButtonClick}>
         {isListFulled ? "리스트 꽉 참" : "추가하기"}
       </Button>
