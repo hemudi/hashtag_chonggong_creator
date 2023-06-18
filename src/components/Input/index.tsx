@@ -25,8 +25,13 @@ const S = {
     height: 40px;
     border: 2px solid ${theme.palette.primary};
     border-radius: 10px;
-    padding-left: 10px;
+    padding: 0 10px;
     font-size: ${theme.fonts.size.base};
+    background-color: ${theme.palette.white};
+    &:focus {
+      border-color: ${theme.palette.primary_dark};
+      background-color: "orange";
+    }
   `,
 };
 
