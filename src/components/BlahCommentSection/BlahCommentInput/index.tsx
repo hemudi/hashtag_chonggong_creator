@@ -11,8 +11,10 @@ import {
 } from "@store/hashtag";
 import theme from "@styles/theme";
 import { parsedBlahComment } from "@utils/format";
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect } from "react";
 import { styled } from "styled-components";
+
+const PLACE_HOLDER = `해시태그 개수 + 1 개의 10자 이상의 문장을 Enter 로 구분해서 입력해주세요.\n해시태그 개수 + 1 개 이상의 문장을 입력하시면 랜덤으로 섞여서 생성됩니다!\n유효한 양식으로 입력하시면 생성하기 버튼이 활성화됩니다.`;
 
 const BlahCommentInput = () => {
   const hashTagCount = useHashTagCount();
@@ -47,11 +49,7 @@ const BlahCommentInput = () => {
 
   return (
     <S.BlahCommentInput>
-      <TextArea
-        value={value}
-        onChange={handleTextAreaChange}
-        placeholder={`추가한 해시태그 개수 + 1 개의 10자 이상의 문장을 Enter 로 구분해서 입력해주세요.\n만약 추가한 해시태그 개수 + 1 개 이상의 문장을 입력하시면 랜덤으로 섞여서 생성됩니다!\n유효한 양식으로 입력하시면 생성하기 버튼이 활성화됩니다.`}
-      />
+      <TextArea value={value} onChange={handleTextAreaChange} placeholder={PLACE_HOLDER} />
       <Button size="full" disabled={createMode === CREATE_MODE.PREVENT} onClick={handleCreateButtonClick}>
         {createMode === CREATE_MODE.PREVENT
           ? "생성 불가"
