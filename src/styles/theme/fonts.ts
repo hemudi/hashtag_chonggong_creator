@@ -13,7 +13,8 @@ export const fonts = {
     logo: "3.5rem",
   },
   weight: {
-    regular: 400,
+    normal: 400,
+    regular: 500,
     bold: 700,
   },
   family: {
