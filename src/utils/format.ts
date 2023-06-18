@@ -20,7 +20,7 @@ export const createRandomHashTagComment = (hashTagList: HashTag[], blahCommentLi
     hashTagList.reduce(
       (prev, hashTag, index) => `${prev}${blahCommentList[randomIndexList[index]]}\n${hashTag}\n`,
       ""
-    ) + blahCommentList[blahCommentList.length - 1];
+    ) + blahCommentList[randomIndexList[randomIndexList.length - 1]];
   return result;
 };
 
