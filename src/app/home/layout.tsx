@@ -1,3 +1,5 @@
+import Layout from "@layout/Layout";
+
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return <Layout>{children}</Layout>;
 }
