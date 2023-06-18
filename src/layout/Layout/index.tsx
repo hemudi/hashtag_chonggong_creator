@@ -19,7 +19,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 const S = {
   Layout: styled.div`
     ${theme.mixins.flexBox("column", "center", "flex-start")}
-    height: 100vh;
     min-height: 100vh;
   `,
 };

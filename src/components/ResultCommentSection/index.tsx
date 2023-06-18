@@ -10,8 +10,10 @@ const RESULT_COMMENT_DESCRIPTION = `생성된 총공글을 확인해보세요!\n
 const ResultCommentSection = () => {
   return (
     <Section title={RESULT_COMMENT_TITLE} description={RESULT_COMMENT_DESCRIPTION} height="fit-content">
-      <ResultCommentViewer />
-      <ResultCommentTools />
+      <S.Contents>
+        <ResultCommentViewer />
+        <ResultCommentTools />
+      </S.Contents>
     </Section>
   );
 };
