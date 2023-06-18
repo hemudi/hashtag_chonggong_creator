@@ -17,7 +17,8 @@ const S = {
   Header: styled.header`
     ${theme.mixins.flexBox("column")}
     ${theme.mixins.preventDraggable()}
-    padding-bottom: 30px;
+    width: 100%;
+    padding: 30px;
   `,
   Title: styled.h1`
     font-size: ${theme.fonts.size.xxLarge};
@@ -25,6 +26,7 @@ const S = {
   `,
   Description: styled.span`
     color: ${theme.palette.neutral_dark};
+    font-size: ${theme.fonts.size.medium};
   `,
 };
 
