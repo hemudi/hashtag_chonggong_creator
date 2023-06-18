@@ -2,7 +2,7 @@ import HashTagInputSection from "@components/HashTagInputSection";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof HashTagInputSection> = {
-  title: "HashTag/HashTagInputSection",
+  title: "Section/HashTag/HashTagInputSection",
   component: HashTagInputSection,
   tags: ["autodocs"],
 };

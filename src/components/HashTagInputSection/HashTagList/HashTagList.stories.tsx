@@ -2,7 +2,7 @@ import HashTagList from "@components/HashTagInputSection/HashTagList";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof HashTagList> = {
-  title: "HashTag/HashTagList",
+  title: "Section/HashTag/HashTagList",
   component: HashTagList,
   tags: ["autodocs"],
 };

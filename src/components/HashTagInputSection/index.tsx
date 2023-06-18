@@ -12,7 +12,6 @@ const HashTagInputSection = () => {
     <Section
       title={HASHTAG_INPUT_SECTION_TITLE}
       description={HASHTAG_INPUT_SECTION_DESCRIPTION}
-      width="25px"
       height="fit-content"
     >
       <S.Contents>
