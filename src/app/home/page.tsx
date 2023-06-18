@@ -19,8 +19,6 @@ export default function HomePage() {
 const S = {
   PageContents: styled.div`
     ${theme.mixins.flexBox("column")}
-    width: 570px;
-    min-width: 450px;
     height: fit-content;
     background: ${theme.palette.white};
     padding: 10px;

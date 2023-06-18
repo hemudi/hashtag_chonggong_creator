@@ -20,6 +20,7 @@ const S = {
   Layout: styled.div`
     ${theme.mixins.flexBox("column", "center", "flex-start")}
     min-height: 100vh;
+    margin: 10px;
   `,
 };
 
