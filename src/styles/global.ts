@@ -26,6 +26,10 @@ const GlobalStyles = createGlobalStyle`
         letter-spacing: -0.4px;
       }
 
+    strong {
+      font-weight: ${theme.fonts.weight.bold}
+    }
+
     a {
         text-decoration: none;
         color: inherit;
