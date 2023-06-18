@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
     body {
         height: 100%;
         color: ${theme.palette.black};
+        background-color: ${theme.palette.primary_light};
         font-size: 1.6rem;
         font-weight: 400;
         font-family: 'Noto Sans KR', sans-serif;
