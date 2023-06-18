@@ -5,8 +5,8 @@ import { styled } from "styled-components";
 interface SectionProps {
   title: string;
   description?: ReactNode;
-  width: `${number}px` | `${number}%`;
-  height: `${number}px` | `${number}%`;
+  width?: `${number}px` | `${number}%` | "fit-content";
+  height?: `${number}px` | `${number}%` | "fit-content";
   children: ReactNode;
 }
 
@@ -15,7 +15,7 @@ const Section = ({ title, description = "", width, height, children }: SectionPr
     <S.Section width={width} height={height}>
       <S.Title>{title}</S.Title>
       <S.Description>{description}</S.Description>
-      <S.Contents>{children}</S.Contents>
+      {children}
     </S.Section>
   );
 };
@@ -25,7 +25,7 @@ const S = {
     ${theme.mixins.flexBox("column", "flex-start")}
     width: ${({ width = "100%" }) => width};
     height: ${({ height = "100%" }) => height};
-    min-width: 400px;
+    width: 100%;
     min-height: fit-content;
     padding: 10px;
   `,
@@ -41,10 +41,6 @@ const S = {
     line-height: ${theme.fonts.size.medium};
     color: ${theme.palette.neutral_dark};
     padding: 5px 0 10px 0;
-  `,
-  Contents: styled.div`
-    width: 100%;
-    height: 100%;
   `,
 };
 

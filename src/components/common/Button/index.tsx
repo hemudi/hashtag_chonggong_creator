@@ -4,7 +4,7 @@ import { css, styled } from "styled-components";
 
 interface ButtonProps {
   size: "large" | "medium" | "small" | "full";
-  disabled: boolean;
+  disabled?: boolean;
   children: ReactNode;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
@@ -28,6 +28,7 @@ const S = {
       border: 2px solid ${theme.palette.primary_dark};
     }
     &:disabled {
+      color: ${theme.palette.neutral_dark};
       background-color: ${theme.palette.neutral_light};
       cursor: not-allowed;
     }
@@ -36,11 +37,11 @@ const S = {
 
 const ButtonSizeStyle = {
   small: css`
-    width: 70px;
+    width: 50px;
     height: 40px;
   `,
   medium: css`
-    width: 200px;
+    width: 100px;
     height: 40px;
   `,
   large: css`
