@@ -15,11 +15,10 @@ const S = {
   Footer: styled.footer`
     ${theme.mixins.flexBox()}
     width: 100%;
-    height: 100px;
+    height: 60px;
   `,
   Author: styled.span`
-    color: ${theme.palette.neutral};
-    font-weight: ${theme.fonts.weight.bold};
+    color: ${theme.colors.grey700};
   `,
   Link: styled.a`
     color: ${theme.palette.primary_dark};

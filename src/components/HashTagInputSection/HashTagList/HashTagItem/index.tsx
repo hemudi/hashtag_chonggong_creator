@@ -21,7 +21,7 @@ const HashTagItem = ({ num, hashTag, ...props }: HashTagItemProps) => {
     <S.Item>
       <S.Index>{num}</S.Index>
       <S.HashTag>{hashTag}</S.HashTag>
-      <Button size="small" backgroundColor="secondary" onClick={handleClickRemoveButton}>
+      <Button size="small" backColor="secondary" onClick={handleClickRemoveButton}>
         <Icon type="delete" alt="해시태그 삭제" />
       </Button>
     </S.Item>

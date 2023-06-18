@@ -31,7 +31,7 @@ interface HashTagStore extends HashTagStoreState {
 }
 
 const HASHTAG_INIT_DATA: HashTagStoreState = {
-  hashTagList: ["#테스트"],
+  hashTagList: [],
   blahCommentList: [],
   hashTagComment: "",
   createMode: CREATE_MODE.PREVENT,
