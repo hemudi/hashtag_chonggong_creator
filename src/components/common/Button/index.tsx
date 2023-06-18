@@ -1,4 +1,5 @@
 import theme from "@styles/theme";
+import { Palette } from "@styles/theme/colors";
 import { MouseEventHandler, ReactNode } from "react";
 import { css, styled } from "styled-components";
 
@@ -6,6 +7,7 @@ interface ButtonProps {
   size: "large" | "medium" | "small" | "full";
   disabled?: boolean;
   children: ReactNode;
+  backgroundColor?: keyof Palette;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
@@ -16,16 +18,19 @@ const Button = ({ size, ...props }: ButtonProps) => {
 const S = {
   Button: styled.button<ButtonProps>`
     ${({ size = "medium" }) => ButtonSizeStyle[size]}
-    background-color: ${theme.palette.primary};
+    background-color: ${({ backgroundColor = "primary" }) => theme.palette[backgroundColor]};
     border-radius: 10px;
     font-size: ${theme.fonts.size.small};
     font-weight: ${theme.fonts.weight.regular};
     &:enabled:hover {
-      background-color: ${theme.palette.primary_dark};
+      background-color: ${({ backgroundColor = "primary" }) =>
+        backgroundColor === "primary" ? theme.palette.primary_dark : theme.palette.secondary_dark};
     }
     &:enabled:active {
-      background-color: ${theme.palette.primary};
-      border: 2px solid ${theme.palette.primary_dark};
+      background-color: ${({ backgroundColor = "primary" }) => theme.palette[backgroundColor]};
+      border: 2px solid
+        ${({ backgroundColor = "primary" }) =>
+          backgroundColor === "primary" ? theme.palette.primary_dark : theme.palette.secondary_dark};
     }
     &:disabled {
       color: ${theme.palette.neutral_dark};

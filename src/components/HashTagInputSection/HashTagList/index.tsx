@@ -8,9 +8,9 @@ const HashTagList = () => {
   const hashTagList = useHashTagList();
   return (
     <S.HashTagList>
-      {hashTagList.map((value, index) => (
-        <HashTagItem key={index} hashTag={value} num={index + 1} />
-      ))}
+      {hashTagList.length > 0
+        ? hashTagList.map((value, index) => <HashTagItem key={index} hashTag={value} num={index + 1} />)
+        : "추가 된 해시태그가 없습니다!"}
     </S.HashTagList>
   );
 };
@@ -18,10 +18,12 @@ const HashTagList = () => {
 const S = {
   HashTagList: styled.ul`
     ${theme.mixins.flexBox("column")}
+    ${theme.mixins.preventDraggable()}
     width: 100%;
     height: 100%;
     min-height: 40px;
     gap: 10px;
+    color: ${theme.palette.neutral_dark};
     background-color: ${theme.palette.primary_light};
     border-radius: 10px;
     padding: 10px;

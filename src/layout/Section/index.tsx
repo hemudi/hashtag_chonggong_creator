@@ -39,7 +39,7 @@ const S = {
     white-space: pre-line;
     font-size: ${theme.fonts.size.small};
     line-height: ${theme.fonts.size.medium};
-    color: ${theme.palette.neutral_dark};
+    color: ${theme.colors.grey900};
     padding: 5px 0 10px 0;
   `,
 };
