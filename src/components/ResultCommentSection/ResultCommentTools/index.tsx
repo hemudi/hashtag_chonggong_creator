@@ -16,7 +16,9 @@ const ResultCommentTools = () => {
     }
   }, [hashTagComment]);
 
-  const handleCopyButtonClick = () => {};
+  const handleCopyButtonClick = () => {
+    window.navigator.clipboard.writeText(hashTagComment);
+  };
 
   const handleShareButtonClick = () => {};
 
