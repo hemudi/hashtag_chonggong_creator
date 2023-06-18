@@ -28,6 +28,7 @@ const S = {
       border: 2px solid ${theme.palette.primary_dark};
     }
     &:disabled {
+      color: ${theme.palette.neutral_dark};
       background-color: ${theme.palette.neutral_light};
       cursor: not-allowed;
     }
