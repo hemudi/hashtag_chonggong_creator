@@ -13,6 +13,7 @@ type TextAreaProps = {
   cols?: number;
   rows?: number;
   resize?: Resize;
+  disabled?: boolean;
   onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
   onBlur?: (e: FocusEvent<HTMLTextAreaElement>) => void;
 };

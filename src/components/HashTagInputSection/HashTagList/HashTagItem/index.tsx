@@ -21,7 +21,7 @@ const HashTagItem = ({ num, hashTag, ...props }: HashTagItemProps) => {
     <S.Item>
       <S.Index>{num}</S.Index>
       <S.HashTag>{hashTag}</S.HashTag>
-      <Button size="small" onClick={handleClickRemoveButton}>
+      <Button size="small" backColor="secondary" onClick={handleClickRemoveButton}>
         <Icon type="delete" alt="해시태그 삭제" />
       </Button>
     </S.Item>
@@ -35,9 +35,11 @@ const S = {
     height: 40px;
     font-size: ${theme.fonts.size.base};
     border-radius: 10px;
+    color: ${theme.palette.black};
     background-color: ${theme.palette.white};
     gap: 10px;
     box-shadow: 2px 2px 3px ${theme.palette.neutral};
+    overflow: hidden;
   `,
   Index: styled.div`
     ${theme.mixins.flexBox()}
