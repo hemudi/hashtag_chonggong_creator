@@ -20,7 +20,9 @@ const ResultCommentTools = () => {
     window.navigator.clipboard.writeText(hashTagComment);
   };
 
-  const handleShareButtonClick = () => {};
+  const handleShareButtonClick = () => {
+    window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(hashTagComment));
+  };
 
   return (
     <S.ResultCommentTools>
