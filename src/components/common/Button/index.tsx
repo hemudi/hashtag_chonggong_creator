@@ -4,7 +4,7 @@ import { css, styled } from "styled-components";
 
 interface ButtonProps {
   size: "large" | "medium" | "small" | "full";
-  disabled: boolean;
+  disabled?: boolean;
   children: ReactNode;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
