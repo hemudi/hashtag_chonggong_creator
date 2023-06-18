@@ -23,7 +23,10 @@ const useHashTagStore = create<HashTagStore>((set) => ({
   ...HASHTAG_INIT_DATA,
   actions: {
     addHashTag: (newHashtag: HashTag) => {
-      set(({ hashTagList }) => ({ hashTagList: [...hashTagList, newHashtag] }));
+      set(({ hashTagList }) => {
+        if (hashTagList.indexOf(newHashtag) >= 0) return { hashTagList };
+        return { hashTagList: [...hashTagList, newHashtag] };
+      });
     },
     removeHashTag: (hashTagIndex: number) => {
       set(({ hashTagList }) => ({ hashTagList: hashTagList.filter((_, index) => index !== hashTagIndex) }));
