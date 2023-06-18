@@ -5,14 +5,18 @@ import HashTagInputSection from "@components/HashTagInputSection";
 import theme from "@styles/theme";
 import BlahCommentSection from "@components/BlahCommentSection";
 import ResultCommentSection from "@components/ResultCommentSection";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function HomePage() {
   return (
-    <S.PageContents>
-      <HashTagInputSection />
-      <BlahCommentSection />
-      <ResultCommentSection />
-    </S.PageContents>
+    <>
+      <S.PageContents>
+        <HashTagInputSection />
+        <BlahCommentSection />
+        <ResultCommentSection />
+      </S.PageContents>
+      <Analytics />
+    </>
   );
 }
 
