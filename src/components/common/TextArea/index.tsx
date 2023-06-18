@@ -28,7 +28,7 @@ const S = {
     border: 2px solid ${theme.palette.primary};
     border-radius: 10px;
     padding: 10px;
-    font-size: ${theme.fonts.size.base};
+    font-size: ${theme.fonts.size.small};
     resize: ${({ resize }) => resize};
     outline-color: ${theme.palette.primary_dark};
   `,
