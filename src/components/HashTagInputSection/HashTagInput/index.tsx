@@ -1,14 +1,14 @@
 import Button from "@components/common/Button";
 import Input from "@components/common/Input";
 import useInputValue from "@hooks/useInputValue";
-import { HashTag, useHashTagAction, useHashTagCount } from "@store/hashtag";
+import { useHashTagAction, useHashTagCount } from "@store/hashtag";
 import theme from "@styles/theme";
+import { createHashTag } from "@utils/format";
 import { ChangeEvent, useEffect, useState } from "react";
 import { styled } from "styled-components";
 
 const HASHTAG_MAX_COUNT = 5;
 
-// TODO : 해시태그 유효성 검사
 const HashTagInput = () => {
   const [isAddible, setIsAddible] = useState<boolean>(false);
   const [isListFulled, setIsListFulled] = useState<boolean>(false);
@@ -43,7 +43,7 @@ const HashTagInput = () => {
 
   const handleAddButtonClick = () => {
     setInputValue((value) => {
-      addHashTag(value as HashTag);
+      addHashTag(createHashTag(value));
       return "";
     });
   };
