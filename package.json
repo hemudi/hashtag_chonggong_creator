@@ -34,7 +34,10 @@
     "@storybook/react": "^7.0.22",
     "@storybook/testing-library": "^0.0.14-next.2",
     "@svgr/webpack": "^8.0.1",
+    "autoprefixer": "^10.4.15",
     "eslint-plugin-storybook": "^0.6.12",
-    "storybook": "^7.0.22"
+    "postcss": "^8.4.28",
+    "storybook": "^7.0.22",
+    "tailwindcss": "^3.3.3"
   }
 }
