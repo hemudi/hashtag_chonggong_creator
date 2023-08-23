@@ -1,12 +1,15 @@
 import theme from "@styles/theme";
 import { styled } from "styled-components";
 
-const AUTHOR_NICKNAME = "Heasam Smoothie";
+const DEVELOPER_INFO = {
+  NAME: "해삼스무디",
+  LINK: "https://twitter.com/plave_smoothie",
+};
 
 const Footer = () => {
   return (
     <S.Footer>
-      <S.Author>{`Created By. ${AUTHOR_NICKNAME}`}</S.Author>
+      <S.Link href={DEVELOPER_INFO.LINK} target="_blank">{`Developed By. ${DEVELOPER_INFO.NAME}`}</S.Link>
     </S.Footer>
   );
 };
@@ -16,12 +19,18 @@ const S = {
     ${theme.mixins.flexBox()}
     width: 100%;
     height: 60px;
+    gap: 10px;
   `,
   Author: styled.span`
     color: ${theme.colors.grey700};
+    font-size: ${theme.fonts.size.small};
   `,
   Link: styled.a`
-    color: ${theme.palette.primary_dark};
+    color: ${theme.colors.grey700};
+    font-size: ${theme.fonts.size.small};
+    &:hover {
+      color: ${theme.palette.primary_dark};
+    }
   `,
 };
 
