@@ -7,9 +7,9 @@ export const createHashTag = (hashTagText: string): HashTag => {
 
 export const parsedBlahComment = (blahComment: string): string[] => {
   return blahComment
-    .replace(/ /g, "") // 공백제거
-    .split("\n") // Enter 로 구분
-    .filter((value) => value !== "" && value.length >= 10); // 10자 넘는 문장만
+    .replace(/[\p{Extended_Pictographic}\p{P}" "]/gu, "")
+    .split("\n")
+    .filter((value) => value.length >= 10);
 };
 
 export const createRandomHashTagComment = (hashTagList: HashTag[], blahCommentList: string[]): string => {
