@@ -1,4 +1,4 @@
-import DeleteIconUrl from "public/Icon/ic_delete.svg?url";
+import DeleteIconUrl from "public/assets/Icon/ic_delete.svg?url";
 import Image from "next/image";
 
 const iconUrls = {
