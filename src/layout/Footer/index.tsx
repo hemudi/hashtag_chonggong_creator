@@ -5,12 +5,13 @@ const DEVELOPER_INFO = {
 
 const Footer = () => {
   return (
-    <footer className="flex justify-center items-center w-full h-20 gap-2.5">
+    <footer className="flex flex-col justify-center items-center w-full h-20 gap-2.5 text-gray text-xs">
       <a
-        className="text-gray text-xs hover:text-secondary-500"
+        className="hover:text-secondary-500"
         href={DEVELOPER_INFO.LINK}
         target="_blank"
       >{`Developed By. ${DEVELOPER_INFO.NAME}`}</a>
+      <span>Version 2.1</span>
     </footer>
   );
 };
