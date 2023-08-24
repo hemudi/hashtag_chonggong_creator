@@ -1,6 +1,3 @@
-import { MouseEvent } from "react";
-import { styled } from "styled-components";
-import theme from "@styles/theme";
 import Button from "@components/common/Button";
 import Icon from "@components/common/Icon";
 import { useHashTagAction } from "@store/hashtag";

@@ -2,10 +2,8 @@ import Button from "@components/common/Button";
 import Input from "@components/common/Input";
 import useInputValue from "@hooks/useInputValue";
 import { useHashTagAction, useHashTagCount } from "@store/hashtag";
-import theme from "@styles/theme";
 import { createHashTag } from "@utils/format";
 import { ChangeEvent, useEffect, useState, KeyboardEvent } from "react";
-import { styled } from "styled-components";
 
 const HASHTAG_MAX_COUNT = 5;
 
