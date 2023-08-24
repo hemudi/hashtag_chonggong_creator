@@ -1,4 +1,4 @@
-import StyledComponentsRegistry from "@lib/styledComponentsRegistry";
+import "@styles/global.css";
 
 export const metadata = {
   title: "해시태그 총공글 생성기 | HashTag Conggong Creator",
@@ -11,9 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <head />
-      <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

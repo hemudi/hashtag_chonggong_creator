@@ -1,6 +1,4 @@
-import theme from "@styles/theme";
 import { ChangeEvent, FocusEvent, KeyboardEvent } from "react";
-import styled from "styled-components";
 
 type TextInputTypes = "text" | "email" | "number" | "password" | "search" | "tel" | "date" | "url";
 
@@ -18,25 +16,12 @@ interface InputProps {
 }
 
 const Input = (props: InputProps) => {
-  return <S.Input {...props} />;
-};
-
-const S = {
-  Input: styled.input<InputProps>`
-    width: 100%;
-    height: 40px;
-    border: 2px solid ${theme.palette.primary};
-    border-radius: 10px;
-    padding: 0 10px;
-    font-size: ${theme.fonts.size.base};
-    background-color: ${theme.palette.white};
-    &:focus {
-      border-color: ${theme.palette.primary_dark};
-    }
-    &:disabled {
-      border-color: ${theme.palette.neutral};
-    }
-  `,
+  return (
+    <input
+      className="w-full h-10 px-1.5 bg-white border-2 border-secondary-200 rounded-md focus:outline-none focus:border-primary-200 disabled:border-gray text-gray text-xs sm:text-sm "
+      {...props}
+    />
+  );
 };
 
 export default Input;

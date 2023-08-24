@@ -12,18 +12,6 @@ export default meta;
 type Story = StoryObj<typeof Layout>;
 export const Default: Story = {
   args: {
-    children: (
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%",
-          height: "100%",
-        }}
-      >
-        Main Contents
-      </div>
-    ),
+    children: <div className="flex items-center justify-center w-full h-full">Main Contents</div>,
   },
 };

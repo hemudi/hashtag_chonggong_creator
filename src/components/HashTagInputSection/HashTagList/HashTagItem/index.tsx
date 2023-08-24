@@ -1,6 +1,3 @@
-import { MouseEvent } from "react";
-import { styled } from "styled-components";
-import theme from "@styles/theme";
 import Button from "@components/common/Button";
 import Icon from "@components/common/Icon";
 import { useHashTagAction } from "@store/hashtag";
@@ -18,47 +15,18 @@ const HashTagItem = ({ num, hashTag, ...props }: HashTagItemProps) => {
   };
 
   return (
-    <S.Item>
-      <S.Index>{num}</S.Index>
-      <S.HashTag>{hashTag}</S.HashTag>
-      <Button size="small" backColor="secondary" onClick={handleClickRemoveButton}>
+    <li className="flex w-full h-10 bg-white rounded-md text-xs sm:text-sm gap-1.5 overflow-hidden drop-shadow-md text-neutral-900">
+      <div className="flex items-center justify-center w-12 h-full bg-secondary-100 font-bold text-sm sm:text-lg">
+        {num}
+      </div>
+      <div className="flex flex-col justify-center w-full h-full overflow-hidden whitespace-normal break-all text-ellipsis">
+        {hashTag}
+      </div>
+      <Button size="small" onClick={handleClickRemoveButton}>
         <Icon type="delete" alt="해시태그 삭제" />
       </Button>
-    </S.Item>
+    </li>
   );
-};
-
-const S = {
-  Item: styled.li`
-    ${theme.mixins.flexBox("row")}
-    width: 100%;
-    height: 40px;
-    font-size: ${theme.fonts.size.base};
-    border-radius: 10px;
-    color: ${theme.palette.black};
-    background-color: ${theme.palette.white};
-    gap: 10px;
-    box-shadow: 2px 2px 3px ${theme.palette.neutral};
-    overflow: hidden;
-  `,
-  Index: styled.div`
-    ${theme.mixins.flexBox()}
-    width: 50px;
-    height: 100%;
-    background-color: ${theme.palette.primary};
-    border-radius: 10px;
-    font-weight: ${theme.fonts.weight.bold};
-    font-size: ${theme.fonts.size.large};
-  `,
-  HashTag: styled.div`
-    ${theme.mixins.flexBox("column", "flex-start")}
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    word-break: break-all;
-    text-overflow: ellipsis;
-  `,
 };
 
 export default HashTagItem;
