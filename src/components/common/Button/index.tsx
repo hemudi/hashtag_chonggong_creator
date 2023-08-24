@@ -1,62 +1,25 @@
-import theme from "@styles/theme";
-import { Palette } from "@styles/theme/colors";
 import { MouseEventHandler, ReactNode } from "react";
-import { css, styled } from "styled-components";
 
 interface ButtonProps {
-  size: "large" | "medium" | "small" | "full";
+  size: "small" | "medium" | "full";
   disabled?: boolean;
   children: ReactNode;
-  backColor?: keyof Palette;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button = ({ size, backColor, ...props }: ButtonProps) => {
-  return <S.Button size={size} {...props}></S.Button>;
+const ButtonSize = {
+  small: "w-12 h-10",
+  medium: "w-24 h-10",
+  full: "w-full h-10",
 };
 
-const S = {
-  Button: styled.button<ButtonProps>`
-    ${({ size = "medium" }) => ButtonSizeStyle[size]}
-    background-color: ${({ backColor = "primary" }) => theme.palette[backColor]};
-    border-radius: 10px;
-    font-size: ${theme.fonts.size.small};
-    font-weight: ${theme.fonts.weight.regular};
-    &:enabled:hover {
-      background-color: ${({ backColor = "primary" }) =>
-        backColor === "primary" ? theme.palette.primary_dark : theme.palette.secondary_dark};
-    }
-    &:enabled:active {
-      background-color: ${({ backColor = "primary" }) => theme.palette[backColor]};
-      border: 2px solid
-        ${({ backColor = "primary" }) =>
-          backColor === "primary" ? theme.palette.primary_dark : theme.palette.secondary_dark};
-    }
-    &:disabled {
-      color: ${theme.palette.neutral_dark};
-      background-color: ${theme.palette.neutral_light};
-      cursor: not-allowed;
-    }
-  `,
-};
-
-const ButtonSizeStyle = {
-  small: css`
-    width: 50px;
-    height: 40px;
-  `,
-  medium: css`
-    width: 100px;
-    height: 40px;
-  `,
-  large: css`
-    width: 520px;
-    height: 40px;
-  `,
-  full: css`
-    width: 100%;
-    height: 40px;
-  `,
+const Button = ({ size, ...props }: ButtonProps) => {
+  return (
+    <button
+      className={`${ButtonSize[size]} flex items-center justify-center text-neutral-800 bg-secondary-100 rounded-md text-sm enabled:hover:bg-primary-200 enabled:active:bg-primary-500 disabled:bg-neutral-200 disabled:text-neutral-500`}
+      {...props}
+    ></button>
+  );
 };
 
 export default Button;

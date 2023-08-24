@@ -1,27 +1,15 @@
-"use client";
-
 import Footer from "@layout/Footer";
 import Header from "@layout/Header";
 import Main from "@layout/Main";
-import theme from "@styles/theme";
-import styled from "styled-components";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <S.Layout>
+    <div className="flex flex-col justify-start items-center min-h-screen bg-gradient-to-b from-secondary-100 to-primary-100">
       <Header />
       <Main>{children}</Main>
       <Footer />
-    </S.Layout>
+    </div>
   );
-};
-
-const S = {
-  Layout: styled.div`
-    ${theme.mixins.flexBox("column", "center", "flex-start")}
-    min-height: 100vh;
-    margin: 10px;
-  `,
 };
 
 export default Layout;

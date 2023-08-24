@@ -21,8 +21,6 @@ export const Default: Story = {
         만약 추가한 해시태그 개수 + 1 개 보다 많은 문장을 입력하시면 랜덤으로 섞여서 생성됩니다!
       </>
     ),
-    width: "500px",
-    height: "200px",
-    children: <textarea style={{ width: "100%", height: "100%" }} />,
+    children: <textarea className="w-full h-full" />,
   },
 };
