@@ -1,8 +1,6 @@
 import Button from "@components/common/Button";
 import { useHashTagComment } from "@store/hashtag";
-import theme from "@styles/theme";
 import { useEffect, useState } from "react";
-import { styled } from "styled-components";
 
 const ResultCommentTools = () => {
   const { hashTagComment } = useHashTagComment();
@@ -25,23 +23,15 @@ const ResultCommentTools = () => {
   };
 
   return (
-    <S.ResultCommentTools>
+    <div className="flex items-center justify-center w-full gap-1.5">
       <Button size="full" disabled={!isSharable} onClick={handleCopyButtonClick}>
         복사하기
       </Button>
       <Button size="full" disabled={!isSharable} onClick={handleShareButtonClick}>
         트위터로 공유하기
       </Button>
-    </S.ResultCommentTools>
+    </div>
   );
-};
-
-const S = {
-  ResultCommentTools: styled.div`
-    ${theme.mixins.flexBox()}
-    width: 100%;
-    gap: 10px;
-  `,
 };
 
 export default ResultCommentTools;

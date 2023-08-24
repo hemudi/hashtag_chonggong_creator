@@ -9,22 +9,13 @@ const RESULT_COMMENT_DESCRIPTION = `생성된 총공글을 확인해보세요!\n
 
 const ResultCommentSection = () => {
   return (
-    <Section title={RESULT_COMMENT_TITLE} description={RESULT_COMMENT_DESCRIPTION} height="fit-content">
-      <S.Contents>
+    <Section title={RESULT_COMMENT_TITLE} description={RESULT_COMMENT_DESCRIPTION}>
+      <div className="flex flex-col items-center justify-center w-full h-full gap-1.5">
         <ResultCommentViewer />
         <ResultCommentTools />
-      </S.Contents>
+      </div>
     </Section>
   );
-};
-
-const S = {
-  Contents: styled.div`
-    ${theme.mixins.flexBox("column")}
-    width: 100%;
-    height: 100%;
-    gap: 10px;
-  `,
 };
 
 export default ResultCommentSection;
