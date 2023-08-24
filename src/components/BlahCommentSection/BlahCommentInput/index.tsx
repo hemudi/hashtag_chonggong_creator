@@ -9,10 +9,8 @@ import {
   useHashTagComment,
   useHashTagCount,
 } from "@store/hashtag";
-import theme from "@styles/theme";
 import { parsedBlahComment } from "@utils/format";
 import { ChangeEvent, useEffect } from "react";
-import { styled } from "styled-components";
 
 const PLACE_HOLDER = `10자 이상의 문장을 Enter 로 구분해서 입력해주세요.\n유효한 양식으로 입력하시면 생성하기 버튼이 활성화됩니다.\n입력하신 문장의 개수에 따라 순차 생성과 랜덤 생성으로 구분됩니다.\n\n순차생성 : 해시태그 개수 + 1개 문장\n랜덤생성 : 해시태그 개수 + 1개 이상의 문장`;
 
@@ -48,7 +46,7 @@ const BlahCommentInput = () => {
   };
 
   return (
-    <S.BlahCommentInput>
+    <div className="flex flex-col justify-center items-center gap-1.5 w-full h-full">
       <TextArea value={value} onChange={handleTextAreaChange} placeholder={PLACE_HOLDER} />
       <Button size="full" disabled={createMode === CREATE_MODE.PREVENT} onClick={handleCreateButtonClick}>
         {createMode === CREATE_MODE.PREVENT
@@ -59,17 +57,8 @@ const BlahCommentInput = () => {
           ? "순서대로 생성하기"
           : "생성하기"}
       </Button>
-    </S.BlahCommentInput>
+    </div>
   );
-};
-
-const S = {
-  BlahCommentInput: styled.div`
-    ${theme.mixins.flexBox("column")}
-    width: 100%;
-    height: 100%;
-    gap: 10px;
-  `,
 };
 
 export default BlahCommentInput;
