@@ -56,7 +56,7 @@ const HashTagInput = () => {
   };
 
   return (
-    <S.HashTagInput>
+    <div className="flex items-center justify-center w-full h-10 gap-2.5">
       <Input
         value={value}
         placeholder={isListFulled ? "더이상 추가할수 없습니다!" : "해시태그로 쓰고 싶은 문구를 입력하세요!"}
@@ -65,19 +65,10 @@ const HashTagInput = () => {
         disabled={isListFulled}
       />
       <Button disabled={!isAddible} size="medium" onClick={handleAddButtonClick}>
-        {isListFulled ? "리스트 꽉 참" : "추가하기"}
+        {isAddible ? (isListFulled ? "리스트 꽉 참" : "추가하기") : "추가하기"}
       </Button>
-    </S.HashTagInput>
+    </div>
   );
-};
-
-const S = {
-  HashTagInput: styled.div`
-    ${theme.mixins.flexBox()}
-    width: 100%;
-    height: 40px;
-    gap: 10px;
-  `,
 };
 
 export default HashTagInput;
