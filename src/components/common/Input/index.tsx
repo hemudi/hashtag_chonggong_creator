@@ -18,7 +18,7 @@ interface InputProps {
 const Input = (props: InputProps) => {
   return (
     <input
-      className="w-full h-10 px-1.5 bg-white border-2 border-secondary-200 rounded-md focus:outline-none focus:border-primary-200 disabled:border-gray text-gray text-sm"
+      className="w-full h-10 px-1.5 bg-white border-2 border-secondary-200 rounded-md focus:outline-none focus:border-primary-200 disabled:border-gray text-gray text-xs sm:text-sm "
       {...props}
     />
   );

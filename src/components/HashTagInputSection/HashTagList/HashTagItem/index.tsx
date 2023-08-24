@@ -15,8 +15,8 @@ const HashTagItem = ({ num, hashTag, ...props }: HashTagItemProps) => {
   };
 
   return (
-    <li className="flex w-full h-10 bg-white rounded-md text-sm gap-1.5 overflow-hidden drop-shadow-md text-neutral-900">
-      <div className="flex items-center justify-center w-12 h-full bg-secondary-100 font-bold text-lg">
+    <li className="flex w-full h-10 bg-white rounded-md text-xs sm:text-sm gap-1.5 overflow-hidden drop-shadow-md text-neutral-900">
+      <div className="flex items-center justify-center w-12 h-full bg-secondary-100 font-bold text-sm sm:text-lg">
         {num}
       </div>
       <div className="flex flex-col justify-center w-full h-full overflow-hidden whitespace-normal break-all text-ellipsis">

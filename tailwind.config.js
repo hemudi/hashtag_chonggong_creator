@@ -5,11 +5,6 @@ module.exports = {
     "./src/layout/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  purge: [
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/layout/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
   theme: {
     extend: {
       fontFamily: {
@@ -27,6 +22,9 @@ module.exports = {
           500: "#6DC2FF",
         },
         gray: "#3D4F59",
+      },
+      screens: {
+        fold: "400px",
       },
     },
   },
