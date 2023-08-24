@@ -17,8 +17,16 @@ const iconSize: { [key: string]: `${number}` } = {
   large: "35",
 };
 
-const Icon = ({ type, size = "medium", alt }: IconProps) => {
-  return <Image src={iconUrls[type]} width={iconSize[size]} height={iconSize[size]} alt={alt} />;
+const Icon = ({ type, size = "small", alt }: IconProps) => {
+  return (
+    <Image
+      className="flex justify-center items-center"
+      src={iconUrls[type]}
+      width={iconSize[size]}
+      height={iconSize[size]}
+      alt={alt}
+    />
+  );
 };
 
 export default Icon;
