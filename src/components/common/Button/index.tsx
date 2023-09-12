@@ -4,6 +4,7 @@ interface ButtonProps {
   size: "small" | "medium" | "full";
   disabled?: boolean;
   children: ReactNode;
+  className?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
@@ -13,10 +14,10 @@ const ButtonSize = {
   full: "w-full h-10",
 };
 
-const Button = ({ size, ...props }: ButtonProps) => {
+const Button = ({ size, className = "", ...props }: ButtonProps) => {
   return (
     <button
-      className={`${ButtonSize[size]} flex items-center justify-center text-neutral-800 bg-secondary-100 rounded-md text-xs sm:text-sm enabled:hover:bg-primary-200 enabled:active:bg-primary-500 disabled:bg-neutral-200 disabled:text-neutral-500`}
+      className={`${ButtonSize[size]} flex items-center justify-center text-neutral-800 bg-secondary-100 rounded-md text-xs sm:text-sm enabled:hover:bg-primary-200 enabled:active:bg-primary-500 disabled:bg-neutral-200 disabled:text-neutral-500 ${className}`}
       {...props}
     ></button>
   );

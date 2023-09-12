@@ -1,4 +1,6 @@
 import "@styles/global.css";
+import { Suspense } from "react";
+import WebAnalytics from "@components/Analytics";
 
 export const metadata = {
   title: "해시태그 총공글 생성기 | HashTag Conggong Creator",
@@ -11,7 +13,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <head />
-      <body>{children}</body>
+      <body>
+        <Suspense>
+          <WebAnalytics />
+        </Suspense>
+        {children}
+      </body>
     </html>
   );
 }

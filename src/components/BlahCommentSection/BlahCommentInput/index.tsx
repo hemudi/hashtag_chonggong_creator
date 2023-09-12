@@ -48,7 +48,12 @@ const BlahCommentInput = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-1.5 w-full h-full">
       <TextArea value={value} onChange={handleTextAreaChange} placeholder={PLACE_HOLDER} />
-      <Button size="full" disabled={createMode === CREATE_MODE.PREVENT} onClick={handleCreateButtonClick}>
+      <Button
+        className="gt-create"
+        size="full"
+        disabled={createMode === CREATE_MODE.PREVENT}
+        onClick={handleCreateButtonClick}
+      >
         {createMode === CREATE_MODE.PREVENT
           ? "생성 불가"
           : createMode === CREATE_MODE.RANDOM
