@@ -24,10 +24,10 @@ const ResultCommentTools = () => {
 
   return (
     <div className="flex items-center justify-center w-full gap-1.5">
-      <Button size="full" disabled={!isSharable} onClick={handleCopyButtonClick}>
+      <Button className="gt-copy" size="full" disabled={!isSharable} onClick={handleCopyButtonClick}>
         복사하기
       </Button>
-      <Button size="full" disabled={!isSharable} onClick={handleShareButtonClick}>
+      <Button className="gt-share" size="full" disabled={!isSharable} onClick={handleShareButtonClick}>
         트위터로 공유하기
       </Button>
     </div>
