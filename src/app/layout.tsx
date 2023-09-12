@@ -1,4 +1,5 @@
 import "@styles/global.css";
+import Script from "next/script";
 
 export const metadata = {
   title: "해시태그 총공글 생성기 | HashTag Conggong Creator",
@@ -12,6 +13,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ko">
       <head />
       <body>{children}</body>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+        `}
+      </Script>
     </html>
   );
 }

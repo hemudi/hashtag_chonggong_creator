@@ -11,7 +11,7 @@ const Footer = () => {
         href={DEVELOPER_INFO.LINK}
         target="_blank"
       >{`Developed By. ${DEVELOPER_INFO.NAME}`}</a>
-      <span>Version 2.1</span>
+      <span>Version 2.2</span>
     </footer>
   );
 };
