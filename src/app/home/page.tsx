@@ -1,6 +1,5 @@
 "use client";
 
-import { Analytics } from "@vercel/analytics/react";
 import HashTagInputSection from "@components/HashTagInputSection";
 import BlahCommentSection from "@components/BlahCommentSection";
 import ResultCommentSection from "@components/ResultCommentSection";
@@ -16,7 +15,6 @@ export default function HomePage() {
         <BlahCommentSection />
         <ResultCommentSection />
       </div>
-      <Analytics />
     </>
   );
 }

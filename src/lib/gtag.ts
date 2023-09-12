@@ -1,9 +1,9 @@
-export const GOOGLE_ANALYTICS = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
+export const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageView = (url: URL | string) => {
   if (typeof window.gtag !== "undefined") {
-    window.gtag("config", GOOGLE_ANALYTICS as string, {
+    window.gtag("config", GA_ID as string, {
       page_path: url,
     });
   }

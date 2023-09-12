@@ -1,5 +1,6 @@
 import "@styles/global.css";
-import Script from "next/script";
+import { Suspense } from "react";
+import WebAnalytics from "@components/Analytics";
 
 export const metadata = {
   title: "해시태그 총공글 생성기 | HashTag Conggong Creator",
@@ -12,18 +13,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <head />
-      <body>{children}</body>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
-        `}
-      </Script>
+      <body>
+        <Suspense>
+          <WebAnalytics />
+        </Suspense>
+        {children}
+      </body>
     </html>
   );
 }
