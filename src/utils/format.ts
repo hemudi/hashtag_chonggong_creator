@@ -7,7 +7,7 @@ export const createHashTag = (hashTagText: string): HashTag => {
 
 export const parsedBlahComment = (blahComment: string): string[] => {
   return blahComment
-    .replace(/[\p{Extended_Pictographic}\p{P}" "]/gu, "")
+    .replace(/[\p{Extended_Pictographic}\p{P}" "0-9]/gu, "")
     .split("\n")
     .filter((value) => value.length >= 10);
 };
