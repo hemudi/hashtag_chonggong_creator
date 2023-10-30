@@ -16,13 +16,17 @@ const HashTagItem = ({ num, hashTag, ...props }: HashTagItemProps) => {
 
   return (
     <li className="flex w-full h-10 bg-white rounded-md text-xs sm:text-sm gap-1.5 overflow-hidden drop-shadow-md text-neutral-900">
-      <div className="flex items-center justify-center w-12 h-full bg-secondary-100 font-bold text-sm sm:text-lg">
+      <div className="flex items-center justify-center w-12 h-full bg-primary-500 font-bold text-sm text-black sm:text-lg">
         {num}
       </div>
       <div className="flex flex-col justify-center w-full h-full overflow-hidden whitespace-normal break-all text-ellipsis">
         {hashTag}
       </div>
-      <Button size="small" onClick={handleClickRemoveButton}>
+      <Button
+        size="small"
+        className="bg-primary-500 enabled:hover:bg-primary-500"
+        onClick={handleClickRemoveButton}
+      >
         <Icon type="delete" alt="해시태그 삭제" />
       </Button>
     </li>
