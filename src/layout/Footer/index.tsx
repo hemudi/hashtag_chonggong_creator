@@ -1,7 +1,7 @@
 const DEVELOP_INFO = {
   NAME: "해삼스무디",
   LINK: "https://twitter.com/dev_smoothie",
-  VERSION: "2.3",
+  VERSION: "2.4",
 };
 
 const Footer = () => {
