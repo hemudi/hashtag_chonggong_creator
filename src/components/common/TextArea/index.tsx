@@ -16,7 +16,7 @@ type TextAreaProps = {
 const TextArea = ({ ...props }: TextAreaProps) => {
   return (
     <textarea
-      className="w-full h-40 text-xs sm:text-sm resize-none border-2 border-secondary-200 rounded-md focus:outline-none focus:border-primary-200 text-gray p-1.5"
+      className="w-full h-40 text-xs sm:text-sm resize-none border-2 border-black rounded-md focus:outline-none focus:border-black text-gray p-1.5"
       {...props}
     />
   );
