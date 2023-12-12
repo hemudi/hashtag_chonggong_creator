@@ -1,4 +1,4 @@
-const TITLE_TEXT = "#HashTag_Conggong_Creator";
+const TITLE_TEXT = "#HashTag_Chonggong_Creator";
 const DESCRIPTION_TEXT = "실시간 트렌드 해시태그 총공글을 쉽게 생성해보세요!";
 
 const Header = () => {
