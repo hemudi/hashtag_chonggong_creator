@@ -2,7 +2,7 @@ import DeleteIconUrl from "public/assets/Icon/ic_delete.svg?url";
 import Image from "next/image";
 
 const iconUrls = {
-  delete: DeleteIconUrl,
+  delete: "/assets/Icon/delete.png",
 };
 
 interface IconProps {
