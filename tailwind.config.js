@@ -12,22 +12,22 @@ module.exports = {
       },
       colors: {
         primary: {
-          50: "#f3e5f5",
+          50: "#f0f9ff",
           100: "#d1c4e9",
           200: "#b39ddb",
           300: "#9575cd",
           500: "#7e57c2",
         },
         secondary: {
-          100: "#ffdc73",
-          200: "#ffcf40",
-          500: "#ffbf00",
+          100: "#0781A3",
+          200: "#045369",
+          500: "#033644",
         },
         gray: "#3D4F59",
         title: {
           main: "#ffffff",
-          sub: "#f3e5f5",
-          footer: "#ffffff",
+          sub: "#033644",
+          footer: "#033644",
         },
       },
       screens: {
