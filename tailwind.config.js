@@ -12,22 +12,22 @@ module.exports = {
       },
       colors: {
         primary: {
-          50: "#f0f9ff",
-          100: "#d1c4e9",
-          200: "#b39ddb",
-          300: "#9575cd",
-          500: "#7e57c2",
+          50: "#FFF5F9",
+          100: "#FFE3F1",
+          200: "#F2B3C4",
+          300: "#B97E8E",
+          500: "#6F3A4B",
         },
         secondary: {
-          100: "#0781A3",
-          200: "#045369",
-          500: "#033644",
+          100: "#BEA5AA",
+          200: "##564146",
+          500: "#59363F",
         },
         gray: "#3D4F59",
         title: {
-          main: "#ffffff",
-          sub: "#033644",
-          footer: "#033644",
+          main: "#59363F",
+          sub: "#59363F",
+          footer: "#59363F",
         },
       },
       screens: {
@@ -46,7 +46,7 @@ module.exports = {
         },
       },
       animation: {
-        "gradient-xy": "gradient-xy 8s ease infinite",
+        "gradient-xy": "gradient-xy 1.5s ease infinite",
       },
     },
   },
