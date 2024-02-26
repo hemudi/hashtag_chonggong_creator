@@ -12,26 +12,41 @@ module.exports = {
       },
       colors: {
         primary: {
-          50: "#f3e5f5",
-          100: "#d1c4e9",
-          200: "#b39ddb",
-          300: "#9575cd",
-          500: "#7e57c2",
+          50: "#FFF5F9",
+          100: "#FFE3F1",
+          200: "#F2B3C4",
+          300: "#B97E8E",
+          500: "#6F3A4B",
         },
         secondary: {
-          100: "#ffdc73",
-          200: "#ffcf40",
-          500: "#ffbf00",
+          100: "#BEA5AA",
+          200: "##564146",
+          500: "#59363F",
         },
         gray: "#3D4F59",
         title: {
-          main: "#ffffff",
-          sub: "#f3e5f5",
-          footer: "#ffffff",
+          main: "#59363F",
+          sub: "#59363F",
+          footer: "#59363F",
         },
       },
       screens: {
         fold: "400px",
+      },
+      keyframes: {
+        "gradient-xy": {
+          "0%, 100%": {
+            "background-size": "400% 400%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
+        },
+      },
+      animation: {
+        "gradient-xy": "gradient-xy 1.5s ease infinite",
       },
     },
   },
