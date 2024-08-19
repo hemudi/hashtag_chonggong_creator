@@ -1,15 +1,10 @@
-import Image from "next/image";
-
 import Footer from "@layout/Footer";
 import Header from "@layout/Header";
 import Main from "@layout/Main";
 
-const BACKGROUND_IMAGE = "/assets/images/background_noah.jpg";
-
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="relative bg-gradient-to-b from-primary-50 to-primary-100 flex flex-col justify-start items-center min-h-screen">
-      {/* <Image className="-z-10 object-cover" src={BACKGROUND_IMAGE} alt="background image" fill /> */}
+    <div className="relative flex flex-col justify-start items-center min-h-screen bg-cover bg-[url('/assets/images/background.png')]">
       <Header />
       <Main>{children}</Main>
       <Footer />

@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        GmarketSans: ["GmarketSans", "system-ui", "sans-serif"],
+        tenada: ["var(--font-tenada)"],
+        gmarketsans: ["var(--font-gmarketsans)"],
       },
       colors: {
         primary: {
