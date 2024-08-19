@@ -12,42 +12,34 @@ module.exports = {
         gmarketsans: ["var(--font-gmarketsans)"],
       },
       colors: {
+        black: "#353535",
         primary: {
-          50: "#FFF5F9",
-          100: "#FFE3F1",
-          200: "#F2B3C4",
-          300: "#B97E8E",
-          500: "#6F3A4B",
+          200: "#FFB078",
+          300: "#F5761C",
+          500: "#B74C00",
         },
         secondary: {
-          100: "#BEA5AA",
-          200: "##564146",
-          500: "#59363F",
+          300: "#0A397B",
         },
         gray: "#3D4F59",
-        title: {
-          main: "#59363F",
-          sub: "#59363F",
-          footer: "#59363F",
-        },
       },
       screens: {
         fold: "400px",
       },
       keyframes: {
-        "gradient-xy": {
-          "0%, 100%": {
-            "background-size": "400% 400%",
-            "background-position": "left center",
+        "neon-flicker": {
+          "0%, 18%, 22%, 25%, 53%, 57%, 100%": {
+            textShadow:
+              "0 0 2px #EAEAEA, 0 0 10px #F5761C, 0 0 15px #F5761C, 0 0 20px #F5761C, 0 0 30px #F5761C, 0 0 40px #F5761C, 0 0 60px #F5761C",
           },
-          "50%": {
-            "background-size": "200% 200%",
-            "background-position": "right center",
+          "20%, 55%": {
+            textShadow:
+              "0 0 3px #EAEAEA, 0 0 10px #F5761C, 0 0 15px #F5761C, 0 0 20px #F5761C, 0 0 30px #F5761C, 0 0 40px #F5761C",
           },
         },
       },
       animation: {
-        "gradient-xy": "gradient-xy 1.5s ease infinite",
+        "neon-flicker": "neon-flicker 1s infinite",
       },
     },
   },
