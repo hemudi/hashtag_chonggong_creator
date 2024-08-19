@@ -6,7 +6,7 @@ const DEVELOP_INFO = {
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col justify-center items-center w-full h-20 gap-2.5 text-white text-xs">
+    <footer className="flex flex-col select-none cursor-default justify-center items-center w-full h-20 gap-2.5 text-white text-xs">
       <a
         className="hover:text-primary-300"
         href={DEVELOP_INFO.LINK}
