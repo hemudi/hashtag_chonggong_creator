@@ -1,6 +1,7 @@
 import Button from "@components/common/Button";
 import { useHashTagComment } from "@store/hashtag";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const ResultCommentTools = () => {
   const { hashTagComment } = useHashTagComment();
@@ -15,7 +16,9 @@ const ResultCommentTools = () => {
   }, [hashTagComment]);
 
   const handleCopyButtonClick = () => {
-    window.navigator.clipboard.writeText(hashTagComment);
+    window.navigator.clipboard.writeText(hashTagComment).then(() => {
+      toast("복사되었습니다!");
+    });
   };
 
   const handleShareButtonClick = () => {
