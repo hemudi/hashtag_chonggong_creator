@@ -29,17 +29,33 @@ module.exports = {
       keyframes: {
         "neon-flicker": {
           "0%, 18%, 22%, 25%, 53%, 57%, 100%": {
-            textShadow:
-              "0 0 2px #EAEAEA, 0 0 10px #F5761C, 0 0 15px #F5761C, 0 0 20px #F5761C, 0 0 30px #F5761C, 0 0 40px #F5761C, 0 0 60px #F5761C",
+            textShadow: "0 0 1px #EAEAEA, 0 0 10px #F5761C, 0 0 15px #F5761C",
           },
           "20%, 55%": {
-            textShadow:
-              "0 0 3px #EAEAEA, 0 0 10px #F5761C, 0 0 15px #F5761C, 0 0 20px #F5761C, 0 0 30px #F5761C, 0 0 40px #F5761C",
+            textShadow: "0 0 3px #EAEAEA, 0 0 10px #F5761C",
+          },
+        },
+        spin: {
+          "0%": {
+            transform: "translateX(50%) rotate(0deg)",
+          },
+          "100%": {
+            transform: "translateX(50%) rotate(360deg)",
+          },
+        },
+        fadeout: {
+          "0%": {
+            opacity: "1",
+          },
+          "100%": {
+            opacity: "0",
           },
         },
       },
       animation: {
         "neon-flicker": "neon-flicker 1s infinite",
+        spin: "spin 8s linear infinite",
+        fadeout: "fadeout 1s",
       },
     },
   },
