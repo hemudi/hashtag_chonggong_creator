@@ -43,6 +43,14 @@ module.exports = {
             transform: "translateX(50%) rotate(360deg)",
           },
         },
+        "spin-bottom": {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg)",
+          },
+        },
         fadeout: {
           "0%": {
             opacity: "1",
@@ -55,6 +63,7 @@ module.exports = {
       animation: {
         "neon-flicker": "neon-flicker 1s infinite",
         spin: "spin 8s linear infinite",
+        "spin-bottom": "spin-bottom 8s linear infinite",
         fadeout: "fadeout 1s",
       },
     },

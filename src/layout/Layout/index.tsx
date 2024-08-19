@@ -53,14 +53,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <div
       onClick={(e) => handleOnClick(e)}
       onMouseMove={(e) => handleMouseMove(e)}
-      className="flex flex-col justify-start items-center min-w-fit min-h-screen bg-fixed bg-center bg-no-repeat bg-cover bg-[url('/assets/images/background.png')] overflow-hidden"
+      className="flex flex-col justify-start items-center sm:p-0 p-5 min-h-screen bg-fixed bg-center bg-no-repeat bg-cover bg-[url('/assets/images/background.png')] overflow-hidden"
     >
       <Header />
       <Main>{children}</Main>
       <Footer />
       <div
         className="absolute z-40"
-        style={isMobile ? { left: xy.x, top: xy.y } : { left: xy.x + 10, top: xy.y + 10 }}
+        style={isMobile ? { left: xy.x - 15, top: xy.y - 15 } : { left: xy.x + 10, top: xy.y + 10 }}
       >
         <Image src={IMAGES[currentImageIndex]} width={30} height={30} alt="mouse" />
       </div>
