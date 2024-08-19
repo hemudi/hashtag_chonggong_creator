@@ -37,7 +37,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       onMouseMove={(e) => handleMouseMove(e)}
-      className="flex flex-col justify-start items-center min-w-fit min-h-screen bg-fixed bg-center bg-no-repeat bg-cover bg-[url('/assets/images/background.png')]"
+      className="flex flex-col justify-start items-center min-w-fit min-h-screen bg-fixed bg-center bg-no-repeat bg-cover bg-[url('/assets/images/background.png')] overflow-hidden"
     >
       <Header />
       <Main>{children}</Main>
