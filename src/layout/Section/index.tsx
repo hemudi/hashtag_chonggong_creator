@@ -9,8 +9,10 @@ interface SectionProps {
 const Section = ({ title, description = "", children }: SectionProps) => {
   return (
     <section className="flex flex-col items-start justify-center p-2.5 w-full h-fit">
-      <h2 className="w-full text-sm sm:text-lg text-secondary-500">{title}</h2>
-      <p className="w-full text-xs sm:text-sm text-gray whitespace-pre-line leading-5 pt-1 pb-2.5">
+      <h2 className="w-full text-sm sm:text-lg text-primary-300 font-bold select-none cursor-default">
+        {title}
+      </h2>
+      <p className="w-full text-xs sm:text-sm text-gray whitespace-pre-line select-none cursor-default leading-5 pt-1 pb-2.5">
         {description}
       </p>
       {children}
