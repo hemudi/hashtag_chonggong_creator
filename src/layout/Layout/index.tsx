@@ -17,13 +17,28 @@ const IMAGES = [
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [xy, setXY] = useState({ x: 9999, y: 9999 });
+  const [isMobile, setIsMobile] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+  useEffect(() => {
+    setIsMobile(/Mobi/i.test(window.navigator.userAgent));
+  }, []);
+
+  const calcXY = (e: MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    setXY({ x, y });
+    return { x, y };
+  };
+
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    if (isMobile) return;
+    setXY(calcXY(e));
+  };
+
+  const handleOnClick = (e: MouseEvent<HTMLDivElement>) => {
+    if (!isMobile) return;
+    setXY(calcXY(e));
   };
 
   useEffect(() => {
@@ -36,13 +51,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div
+      onClick={(e) => handleOnClick(e)}
       onMouseMove={(e) => handleMouseMove(e)}
       className="flex flex-col justify-start items-center min-w-fit min-h-screen bg-fixed bg-center bg-no-repeat bg-cover bg-[url('/assets/images/background.png')] overflow-hidden"
     >
       <Header />
       <Main>{children}</Main>
       <Footer />
-      <div className="absolute z-40" style={{ left: xy.x + 10, top: xy.y + 10 }}>
+      <div
+        className="absolute z-40"
+        style={isMobile ? { left: xy.x, top: xy.y } : { left: xy.x + 10, top: xy.y + 10 }}
+      >
         <Image src={IMAGES[currentImageIndex]} width={30} height={30} alt="mouse" />
       </div>
     </div>
