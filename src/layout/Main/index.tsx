@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ReactNode } from "react";
 
 const IMAGE_URL = "/assets/images/cd.png";
-const YOUTUBE_HREF = "https://www.youtube.com/watch?v=hi4arjEmGG8";
+const YOUTUBE_HREF = "https://youtu.be/EYG4ROejmyI?si=wbH9N7ppO4C-ZmWf";
 
 const Main = ({ children }: { children: ReactNode }) => {
   return (

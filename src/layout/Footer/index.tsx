@@ -7,8 +7,7 @@ const DEVELOP_INFO = {
 };
 
 const IMAGE_URL = "/assets/images/cd.png";
-const YOUTUBE_HREF =
-  "https://x.com/search?q=%23%EC%95%84%EC%95%84_%EB%93%A4%EB%A6%AC%EC%8B%9C%EB%82%98%EC%9A%94_%EC%98%A4%EB%8A%986PM%F0%9F%93%BB&src=promoted_trend_click&vertical=trends";
+const YOUTUBE_HREF = "https://youtu.be/EYG4ROejmyI?si=wbH9N7ppO4C-ZmWf";
 
 const Footer = () => {
   return (
