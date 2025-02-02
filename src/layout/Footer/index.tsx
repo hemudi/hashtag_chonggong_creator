@@ -3,6 +3,7 @@ import Image from "next/image";
 const DEVELOP_INFO = {
   NAME: "해삼스무디",
   LINK: "https://twitter.com/dev_smoothie",
+  USAGE_LINK: "https://x.com/dev_smoothie/status/1755883489478775034",
   VERSION: "2.9",
 };
 
@@ -18,9 +19,6 @@ const Footer = () => {
         target="_blank"
       >{`Developed By. ${DEVELOP_INFO.NAME}`}</a>
       <span>{`Version ${DEVELOP_INFO.VERSION}`}</span>
-      <a className="sm:hidden block animate-spin-bottom" href={YOUTUBE_HREF} target="_blank">
-        <Image width="300" height="300" alt="plave pum" src={IMAGE_URL} priority />
-      </a>
     </footer>
   );
 };
