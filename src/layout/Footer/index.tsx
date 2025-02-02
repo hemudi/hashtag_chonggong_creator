@@ -3,7 +3,7 @@ import Image from "next/image";
 const DEVELOP_INFO = {
   NAME: "해삼스무디",
   LINK: "https://twitter.com/dev_smoothie",
-  VERSION: "2.8",
+  VERSION: "2.9",
 };
 
 const IMAGE_URL = "/assets/images/cd.png";

@@ -5,6 +5,7 @@ import BlahCommentSection from "@components/BlahCommentSection";
 import ResultCommentSection from "@components/ResultCommentSection";
 import { pageView } from "@lib/gtag";
 import useNavigationEvent from "@hooks/useNavigationEvent";
+import Meteor from "@components/common/Meteor";
 
 export default function HomePage() {
   useNavigationEvent(pageView);

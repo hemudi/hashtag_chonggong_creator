@@ -17,7 +17,7 @@ const ButtonSize = {
 const Button = ({ size, className = "", ...props }: ButtonProps) => {
   return (
     <button
-      className={`${ButtonSize[size]} flex items-center justify-center text-white bg-primary-300 rounded-md text-xs sm:text-sm enabled:hover:bg-primary-500 enabled:active:bg-primary-300 disabled:bg-neutral-200 disabled:text-neutral-500 ${className}`}
+      className={`${ButtonSize[size]} flex items-center justify-center text-white bg-secondary-300 rounded-md text-xs sm:text-sm enabled:hover:bg-secondary-500 enabled:active:bg-secondary-300 disabled:bg-neutral-200 disabled:text-neutral-500 ${className}`}
       {...props}
     ></button>
   );
