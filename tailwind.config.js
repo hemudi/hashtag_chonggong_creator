@@ -9,30 +9,53 @@ module.exports = {
     extend: {
       fontFamily: {
         tenada: ["var(--font-tenada)"],
+        partialsans: ["var(--font-partialsans)"],
         gmarketsans: ["var(--font-gmarketsans)"],
+        blackopsone: ["var(--font-blackopsone)"],
       },
       colors: {
         black: "#353535",
         primary: {
-          200: "#FFB078",
-          300: "#F5761C",
-          500: "#B74C00",
+          200: "#FF35F9",
+          300: "#9704BF",
+          500: "#8C031C",
         },
         secondary: {
-          300: "#0A397B",
+          200: "#030BA6",
+          300: "#030A8C",
+          500: "#0E1259",
         },
         gray: "#3D4F59",
+      },
+      backgroundImage: {
+        "text-gradient":
+          "linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 25%, #FF35F9 50%, #FFFFFF 75%, #FFFFFF 100%)",
       },
       screens: {
         fold: "400px",
       },
       keyframes: {
+        "move-side": {
+          "0%": { transform: "translateX(0%)" },
+          "25%": { transform: "translateX(600%)" },
+          "50%": { transform: "translateX(0%)" },
+          "75%": { transform: "translateX(-600%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
         "neon-flicker": {
-          "0%, 18%, 22%, 25%, 53%, 57%, 100%": {
-            textShadow: "0 0 1px #EAEAEA, 0 0 10px #F5761C, 0 0 15px #F5761C",
+          "0%, 15%, 23%, 40%, 60%, 80%, 100%": {
+            textShadow: "0 0 10px #FF35F9",
           },
-          "20%, 55%": {
-            textShadow: "0 0 3px #EAEAEA, 0 0 10px #F5761C",
+          "18%, 35%, 55%, 75%": {
+            textShadow: "0 0 1px #FF35F9",
+          },
+        },
+        "neon-glow": {
+          "0%, 15%, 23%, 40%, 60%, 80%, 100%": {
+            filter: "drop-shadow(0 0 10px #FF35F9) drop-shadow(0 0 20px #9A35FF)",
+          },
+          "18%, 35%, 55%, 75%": {
+            filter: "drop-shadow(0 0 2px #FF35F9) drop-shadow(0 0 5px #9A35FF)",
           },
         },
         spin: {
@@ -59,9 +82,15 @@ module.exports = {
             opacity: "0",
           },
         },
+        "meteor-fall": {
+          "0%": { transform: "translateY(-10vh) translateX(0) scale(1)", opacity: "1" },
+          "100%": { transform: "translateY(100vh) translateX(-30vw) scale(0.5)", opacity: "0" },
+        },
       },
       animation: {
-        "neon-flicker": "neon-flicker 1s infinite",
+        "move-side": "move-side 5s ease-in-out infinite",
+        "neon-flicker": "neon-flicker 3s infinite",
+        "meteor-fall": "meteor-fall infinite",
         spin: "spin 8s linear infinite",
         "spin-bottom": "spin-bottom 8s linear infinite",
         fadeout: "fadeout 1s",
