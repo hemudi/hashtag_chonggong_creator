@@ -7,14 +7,16 @@ const DEVELOP_INFO = {
   VERSION: "2.9",
 };
 
-const IMAGE_URL = "/assets/images/cd.png";
-const YOUTUBE_HREF = "https://youtu.be/EYG4ROejmyI?si=wbH9N7ppO4C-ZmWf";
-
 const Footer = () => {
   return (
     <footer className="flex flex-col select-none cursor-default justify-center items-center w-full h-fit gap-2.5 p-2.5 sm:p-0 sm:h-20 text-white text-xs">
       <a
-        className="hover:text-primary-300"
+        className="hover:text-secondary-500"
+        href={DEVELOP_INFO.USAGE_LINK}
+        target="_blank"
+      >{`사용 방법 안내`}</a>
+      <a
+        className="hover:text-secondary-500"
         href={DEVELOP_INFO.LINK}
         target="_blank"
       >{`Developed By. ${DEVELOP_INFO.NAME}`}</a>
